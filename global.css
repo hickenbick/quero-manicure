@@ -6,7 +6,7 @@
   --white: #fff;
   --light: #eee;
   --grey: #999;
-  --font: #666;
+  --font: #555;
   --dark: #333;
   --black: #111;
   --btn-hover: #000;
@@ -78,6 +78,40 @@ iframe {
   display: inline-block;
 }
 
+p{
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--font);
+}
+
+p strong{
+  color: var(--dark);
+}
+
+h2 {
+  font-family: var(--title);
+  color: var(--dark);
+  font-size: 36px;
+  line-height: 1;
+}
+
+.title {
+  text-align: center;
+}
+
+.title span{
+  font-family: var(--title);
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: .05rem;
+  font-weight: 700;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
 
 /* header */
 
@@ -87,8 +121,8 @@ iframe {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 32px;
+  padding-bottom: 0px;
   letter-spacing: .05rem;
 }
 
@@ -105,8 +139,6 @@ iframe {
 .header-logo a:hover{
   background-color: var(--btn-hover);
 }
-
-
 
 .header ul li {
   display: inline-block;
@@ -134,8 +166,6 @@ iframe {
 @media (max-width: 425px) {
   .header {
     font-size: 14px;
-    padding-top: 12px;
-    padding-bottom: 12px;
   }
   .header-logo a{
     padding: 12px 24px;
@@ -158,14 +188,13 @@ iframe {
 /* hero-section */
 
 .bg-hero {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 100px;
 }
 
 .hero {
   display: grid;
   grid-template-columns: 6fr 9fr;
-  gap: 40px;
+  gap: 60px;
   align-items: center;
 }
 
@@ -188,17 +217,7 @@ iframe {
 .hero-info div h1 span {
   background: var(--brand-gradient);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent
-}
-
-.hero-info div p{
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--font);
-}
-
-.hero-info div p strong{
-  color: var(--dark);
+  -webkit-text-fill-color: transparent;
 }
 
 .divider {
@@ -206,13 +225,7 @@ iframe {
   width: 30px;
   background-image: var(--brand-gradient);
   border-radius: 1px;
-  margin-left: 8px;
-}
-
-.hero-video {
-  ...
-  /* falls back to 16/9, but otherwise uses ratio from HTML */
-  padding-bottom: calc(var(--aspect-ratio, .5625) * 100%); 
+  margin-left: 2px;
 }
 
 .hero-video {
@@ -220,7 +233,7 @@ iframe {
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
 }
-.hero-video iframe {
+.hero-video video {
   position: absolute;
   top: 0;
   left: 0;
@@ -231,8 +244,8 @@ iframe {
 
 @media (max-width: 1024px) {
   .bg-hero {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   .hero-info div h1{
     font-size: 36px;
@@ -274,6 +287,123 @@ iframe {
     line-height: 1;
   }
 }
+
+/* aulas */
+
+.bg-aulas {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.aulas {
+  display: grid;
+  grid-template-columns: 6fr 8fr;
+  gap: 80px;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.aulas-info {
+  display: grid;
+  gap: 32px;
+}
+
+.aulas-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 8px;
+  column-gap: 30px;
+}
+
+.aulas-list img {
+  width: 32px;
+}
+
+.aulas-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.aulas-list li p {
+  font-size: 16px;
+}
+
+.icons-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* padding-top: 32px; */
+}
+
+.icon-container {
+  text-align: center;
+}
+
+.icon-container img {
+  width: 36px; 
+  margin-bottom: px;
+}
+
+.icon-container span {
+  font-family: var(--title);
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: .05rem;
+  font-weight: 600;
+  display: block;
+  color: var(--dark);
+}
+
+.icon-container p {
+  font-size: 16px;
+  line-height: 1;
+}
+
+@media (max-width: 1024px) {
+  .aulas {
+    gap: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .aulas-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 8px;
+    column-gap: 12px;
+  }
+}
+
+@media (max-width: 850px) {
+  .bg-aulas {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .aulas {
+    grid-template-columns: 1fr;
+  }
+  .aulas-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 8px;
+    column-gap: 12px;
+  }
+  .aulas-img img {
+    max-height: 250px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 600px) {
+  .aulas-list {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+  .icons-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
 
 
 
