@@ -1,0 +1,127 @@
+/* global styles and components*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --white: #fff;
+  --light: #eee;
+  --grey: #999;
+  --font: #666;
+  --dark: #333;
+  --black: #111;
+  --brand-gradient: linear-gradient(90deg, #9B51E0, #BB6BD9);
+
+  --main: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  --title: "poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  --contentWidth: 1220px;
+  --ctPadding: 30px;
+}
+
+html {
+  font-family: var(--main);
+}
+
+* > * {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  /* border: red 1px solid; */
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+.container {
+  padding: 0 max(var(--ctPadding), 50vw - var(--contentWidth) / 2);
+}
+
+.ctn-btn {
+  background-image: var(--brand-gradient);
+  color: var(--white);
+  border-radius: 50px;
+  border: none;
+  font-weight: 500;
+  letter-spacing: .05rem;
+  font-family: var(--main);
+  transition: ease .3s;
+  font-size: inherit;
+}
+
+
+.ctn-btn a {
+  padding: 12px 32px;
+  display: inline-block;
+}
+
+
+/* header */
+
+.header {
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  letter-spacing: .05rem;
+}
+
+.header-logo a{
+  background-color: var(--dark);
+  padding: 12px 32px;
+  border-radius: 8px;
+  color: var(--light);
+  display: inline-block;
+  font-weight: 400;
+}
+
+.header ul li {
+  display: inline-block;
+  color: var(--black);
+  font-weight: 500;
+}
+
+.header ul li a {
+  padding: 16px 8px;
+  display: inline-block;
+}
+
+@media (max-width: 850px) {
+  .header ul {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    font-size: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .header-logo a{
+    padding: 12px 24px;
+  }
+  .ctn-btn a {
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    font-size: 14px;
+  }
+  .header-logo a,
+  .ctn-btn a {
+    padding: 12px 16px;
+  }
+}
+
+
+

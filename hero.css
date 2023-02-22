@@ -1,0 +1,36 @@
+.hero {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-left {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.hero-right {
+  flex: 50%;
+}
+
+.hero h1 {
+  font-family: "sarabun";
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-family: "sarabun";
+  color: #506077;
+  font-style: italic;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: ;
+}
+
