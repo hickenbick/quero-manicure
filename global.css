@@ -43,6 +43,10 @@ img {
   width: 100%;
 }
 
+iframe {
+  width: 100%;
+}
+
 .container {
   padding: 0 max(var(--ctPadding), 50vw - var(--contentWidth) / 2);
 }
@@ -153,10 +157,6 @@ img {
 
 /* hero-section */
 
-/* .bg-hero * {
-  border: solid 1px red;
-} */
-
 .bg-hero {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -164,9 +164,9 @@ img {
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 6fr 9fr;
+  gap: 40px;
   align-items: center;
-  gap: 60px;
 }
 
 .hero-info {
@@ -209,7 +209,23 @@ img {
   margin-left: 8px;
 }
 
-.hero-video img{
+.hero-video {
+  ...
+  /* falls back to 16/9, but otherwise uses ratio from HTML */
+  padding-bottom: calc(var(--aspect-ratio, .5625) * 100%); 
+}
+
+.hero-video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.hero-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 8px;
 }
 
