@@ -580,7 +580,6 @@ h3 {
   .aulas {
     gap: 40px;
     padding-top: 60px;
-    padding-bottom: 40px;
   }
   .aulas-list {
     display: grid;
@@ -617,9 +616,9 @@ h3 {
     gap: 0px;
   }
   .icons-list {
-    padding-top: 20px;
+    padding-top: 16px;
     grid-template-columns: 1fr 1fr;
-    gap: 32px 6px;
+    gap: 32px 8px;
     max-width: 300px;
     margin: 0 auto;
   }
