@@ -290,6 +290,10 @@ h3 {
 }
 
 @media (max-width: 1024px) {
+  .bg-hero {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
   .hero-info div h1{
     font-size: 36px;
   }
@@ -306,10 +310,6 @@ h3 {
 }
 
 @media (max-width: 850px) {
-  .bg-hero {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
   .hero {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -335,17 +335,156 @@ h3 {
   }
 }
 
+/* aulas */
+
+.aulas-img,
+.hero-video {
+  position: relative;
+}
+
+.aulas-img img {
+  position: relative;
+}
+
+.aulas-img div,
+.hero-video div {
+  top: 10px;
+  left: 12px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #BB6BD9;
+  border-radius: 12px;
+  box-shadow:  rgba(187, 107, 217, .2) 0px 7px 29px 0px, inset rgba(187, 107, 217, .2) 0px 7px 29px 0px;
+}
+
+
+.bg-aulas {
+  background-color: #eee;
+  padding-top: 80px;
+  padding-bottom: 115px;
+}
+
+.aulas {
+  display: grid;
+  grid-template-columns: 6fr 8fr;
+  gap: 80px;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.aulas-info {
+  display: grid;
+  gap: 32px;
+}
+
+.aulas-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 8px;
+  column-gap: 30px;
+}
+
+.aulas-list img {
+  width: 32px;
+}
+
+.aulas-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.aulas-list li p {
+  font-size: 16px;
+}
+
+.icons-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* padding-top: 32px; */
+}
+
+.icon-container {
+  text-align: center;
+}
+
+.icon-container img {
+  width: 36px; 
+  margin-bottom: px;
+}
+
+.icon-container span {
+  font-family: var(--title);
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: .05rem;
+  font-weight: 600;
+  display: block;
+  color: var(--dark);
+}
+
+.icon-container p {
+  font-size: 16px;
+  line-height: 1;
+}
+
+@media (max-width: 1024px) {
+  .aulas {
+    gap: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .aulas-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 8px;
+    column-gap: 12px;
+  }
+}
+
+@media (max-width: 850px) {
+  .bg-aulas {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .aulas {
+    grid-template-columns: 1fr;
+  }
+  .aulas-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 8px;
+    column-gap: 12px;
+  }
+  .aulas-img img {
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .aulas-list {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+  .icons-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
 /* beneficios */
 
 .title-out {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  background-color: var(--light);
+  margin-top: 100px;
+  margin-bottom: 80px;
 }
 
 .bg-beneficios {
-  background-color: var(--black);
-  box-shadow: inset 0px 80px var(--light), inset 0px -80px var(--light);
+  background-color: var(--dark);
+  box-shadow: inset 0px 80px var(--white), inset 0px -80px var(--white);
 }
 
 .beneficios {
@@ -420,7 +559,7 @@ h3 {
 
 @media (max-width: 1023px) {
   .bg-beneficios {
-    box-shadow: inset 0px 80px var(--light);
+    box-shadow: inset 0px 80px var(--white);
   }
   .beneficios {
     grid-template-columns: 1fr;
@@ -448,10 +587,6 @@ h3 {
 }
 
 @media (max-width: 767px) {
-  .title-out {
-    padding-top: 60px;
-    padding-bottom: 40px;
-  }
   .beneficios {
     gap: 60px;
   }
@@ -479,151 +614,9 @@ h3 {
     font-size: 14px;
   }
   .beneficios-info .white-btn {
-    margin-top: 16px;
+    margin-top: 32px;
   }
 }
-
-
-/* aulas */
-
-.aulas-img,
-.hero-video {
-  position: relative;
-}
-
-.aulas-img img {
-  position: relative;
-}
-
-.aulas-img div,
-.hero-video div {
-  top: 10px;
-  left: 12px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 2px solid #BB6BD9;
-  border-radius: 12px;
-  box-shadow:  rgba(187, 107, 217, .2) 0px 7px 29px 0px, inset rgba(187, 107, 217, .2) 0px 7px 29px 0px;
-}
-
-.bg-aulas {
-  background-color: #eee;
-  padding-top: 80px;
-  padding-bottom: 115px;
-}
-
-.aulas {
-  display: grid;
-  grid-template-columns: 6fr 8fr;
-  gap: 80px;
-  align-items: center;
-  padding-top: 80px;
-}
-
-.aulas-info {
-  display: grid;
-  gap: 32px;
-}
-
-.aulas-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 8px;
-  column-gap: 30px;
-}
-
-.aulas-list img {
-  min-width: 32px;
-  max-width: 32px;
-}
-
-.aulas-list li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.aulas-list li p {
-  font-size: 16px;
-}
-
-.icons-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.icon-container {
-  text-align: center;
-}
-
-.icon-container img {
-  width: 36px; 
-}
-
-.icon-container span {
-  font-family: var(--title);
-  text-transform: uppercase;
-  font-size: 20px;
-  letter-spacing: .05rem;
-  font-weight: 600;
-  display: block;
-  color: var(--dark);
-}
-
-.icon-container p {
-  font-size: 16px;
-  line-height: 1;
-}
-
-@media (max-width: 1024px) {
-  .aulas {
-    gap: 40px;
-    padding-top: 60px;
-  }
-  .aulas-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 8px;
-    column-gap: 12px;
-  }
-}
-
-@media (max-width: 850px) {
-  .bg-aulas {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  .aulas {
-    grid-template-columns: 1fr;
-  }
-  .aulas-img img {
-    max-height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  .aulas-list {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 0px;
-    column-gap: 0px;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 600px) {
-  .aulas-list {
-    grid-template-columns: 1fr;
-    gap: 0px;
-  }
-  .icons-list {
-    padding-top: 16px;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px 8px;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-}
-
 
 
 
