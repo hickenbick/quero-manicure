@@ -798,14 +798,6 @@ h3 {
   }
 }
 
-
-
-
-
-
-
-
-
 /* carroussel */
 
 .gallery-container {
@@ -822,6 +814,7 @@ h3 {
   padding: 20px 0px;
   line-height: 0px;
   border-radius: 500px;
+  color: var(--yellow);
 }
 
 .gallery {
@@ -837,6 +830,7 @@ h3 {
 
 .gallery {
   overflow-x: auto;
+  max-width: 972px;
 }
 
 .item {
@@ -867,9 +861,13 @@ h3 {
 
 @media (max-width: 424px) {
   .item {
-    max-width: calc(100vw - 78px);
+    width: 250px;
+  }
+  .gallery {
+    max-width: 274px;
   }
 }
+
 
 
 
