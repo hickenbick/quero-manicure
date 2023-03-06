@@ -14,6 +14,8 @@
   --yellow: #fec633;
   --red: #EB5757;
   --brand-gradient: linear-gradient(90deg, #9B51E0, #BB6BD9);
+  --dark-gradient: linear-gradient(150deg, #000, #222, #000);
+  --wpp-gradient: linear-gradient(90deg, #0fa948, #4bc177);
   --brand-gradient-hover: linear-gradient(90deg, #933be6, #c257e9);
 
   --main: "DM Sans", 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -32,6 +34,10 @@
   color: var(--yellow);
 }
 
+.white {
+  color: var(--white);
+}
+
 .red {
   color: var(--red);
 }
@@ -47,6 +53,7 @@ html {
   list-style: none;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
   /* border: red 1px solid; */
 }
 
@@ -67,7 +74,7 @@ iframe {
   padding: 0 max(var(--ctPadding), 50vw - var(--contentWidth) / 2);
 }
 
-@media (max-width: 424px) {
+@media (max-width: 767px) {
   .container {
     padding: 0 max(20px, 50vw - var(--contentWidth) / 2);
   }
@@ -115,6 +122,24 @@ iframe {
 
 .white-btn:hover {
   background-color: var(--yellow);
+}
+
+.wpp-btn {
+  background-image: var(--wpp-gradient);
+}
+
+.wpp-btn:hover {
+  background-image: var(--wpp-gradient);
+}
+
+.wpp-btn a img{
+  margin-bottom: -4px;
+  margin-right: 8px;
+  max-width: 20px;
+}
+
+.wpp-btn a {
+ width: auto;
 }
 
 p{
@@ -484,7 +509,7 @@ h3 {
 }
 
 .bg-beneficios {
-  background-color: var(--dark);
+  background-image: var(--dark-gradient);
   box-shadow: inset 0px 80px var(--white), inset 0px -80px var(--white);
   margin-bottom: 100px;
 }
@@ -866,6 +891,155 @@ h3 {
   .gallery {
     max-width: 274px;
   }
+}
+
+/* precos */
+
+.precos {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 60px;
+}
+
+.precos-left {
+  display: grid;
+  place-items: center;
+}
+
+.precos-wrapper {
+  text-align: center;
+  max-width: 400px;
+  padding: 60px;
+  padding-bottom: 80px;
+  background-image: var(--dark-gradient);
+  color: var(--white);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.precos-wrapper P{
+  color: var(--white);
+}
+
+.precos-wrapper p:first-child {
+font-size: 16px;
+line-height: 18px;
+letter-spacing: 0.1em;
+}
+
+.price-tag {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+} 
+
+.price-tag * {
+  font-weight: 700;
+}
+
+.tag-1 {
+  font-size: 20px;
+  align-self: start;
+}
+
+.tag-2 {
+  font-size: 72px;
+  line-height: 63px;
+}
+
+.tag-3, .tag-4 {
+  align-self: end;
+}
+
+.price-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--light);
+}
+
+.precos-list {
+  display: grid;
+  gap: 24px;
+}
+
+.precos-list li {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 18px;
+}
+
+.precos-list li img {
+  padding-top: 2px;
+  max-width: 18px;
+}
+
+.precos-left .ctn-btn {
+  margin-top: -27px;
+}
+
+.precos-right {
+  display: grid;
+  gap: 65px;
+  place-content: center;
+}
+
+.precos-right p {
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.precos-right div img {
+  max-width: 200px;
+}
+
+.precos-right div:first-child img {
+  max-width: 200px;
+}
+
+.precos-right div *{
+  text-align: center;
+  margin: 5px;
+}
+
+.wpp-cta {
+  padding-top: 60px;
+  padding-bottom: 120px;
+  display: grid;
+  place-items: center;
+  gap: 24px;
+}
+
+.wpp-cta div p:first-child{
+  font-size: 24px;
+  color: var(--dark); 
+}
+
+.wpp-cta div p:nth-child(2) {
+  font-family: var(--main);
+  font-size: 16px;
+  color: var(--grey); 
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .precos {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 424px) {
+    .precos-wrapper {
+      width: 100%;
+      padding: 40px;
+      padding-bottom: 60px;
+    }
+    .precos-wrapper li{
+      text-align: left;
+    }
+    .wpp-cta div p:first-child{
+      font-size: 20px;
+    }
 }
 
 
