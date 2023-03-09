@@ -19,11 +19,9 @@
   --wpp-gradient: linear-gradient(90deg, #0fa948, #4bc177);
   --brand-gradient-hover: linear-gradient(90deg, #933be6, #c257e9);
 
-  --main: "DM Sans", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+  --main: "DM Sans", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
-  --title: "DM Sans", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+  --title: "DM Sans", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
   --contentWidth: 1220px;
   --ctPadding: 30px;
@@ -571,48 +569,6 @@ h3 {
   }
 }
 
-/* anuncios */
-
-.bg-anuncios {
-  padding-top: 120px;
-  padding-bottom: 120px;
-  background-color: var(--light-background);
-}
-
-.anuncios {
-  display: grid;
-  gap: 60px;
-  margin: 0 auto;
-}
-
-.anuncios-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-}
-
-.anuncios-grid p {
-  text-align: center;
-}
-
-.anuncios-grid img {
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 4px;
-  margin-bottom: 16px;
-}
-
-.anuncios-grid div {
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  .anuncios-grid {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-}
-
 /* beneficios */
 
 .bg-beneficios {
@@ -788,23 +744,61 @@ h3 {
   }
 }
 
-/* depoimentos */
+/* anuncios */
 
-.bg-depoimentos p {
-  color: var(--light);
-  font-weight: 400;
+.bg-anuncios {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: var(--light-background);
 }
+
+.anuncios {
+  display: grid;
+  gap: 60px;
+  margin: 0 auto;
+}
+
+.anuncios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.anuncios-grid p {
+  text-align: center;
+}
+
+.anuncios-grid img {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 4px;
+  margin-bottom: 16px;
+}
+
+.anuncios-grid div {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .bg-anuncios {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .anuncios-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+/* depoimentos */
 
 .bg-depoimentos {
   background-color: var(--black);
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-.depoimentos {
-  display: block;
-  grid-template-columns: 1fr;
-  gap: 40px;
+  padding-top: 120px;
+  padding-bottom: 160px;
 }
 
 .depoimentos-top {
@@ -823,10 +817,21 @@ h3 {
 .quote {
   position: relative;
   margin-bottom: 40px;
+  font-style: italic;
+}
+
+.quote p{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: var(--light);
+  line-height: 1.5;
+  font-size: 20px;
+  max-width: 34ch;
+  margin: 0 auto;
 }
 
 .quote:before,
 .quote:after {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 86px;
   opacity: 0.3;
   position: absolute;
@@ -834,41 +839,41 @@ h3 {
 }
 
 .quote:before {
-  content: "❝";
-  top: -50px;
-  left: -40px;
+  content: "“";
+  top: -35px;
+  left: -25px;
 }
 
 .quote:after {
-  content: "❞";
+  content: "”";
   position: absolute;
   bottom: -80px;
   right: 0px;
 }
 
-.quote {
-  color: var(--light);
-  font-style: italic;
-}
-
-.quote p {
-  font-size: 24px;
+.depoimentos-person {
+  margin-left: auto;
+  text-align: end;
 }
 
 .depoimentos-person p:first-child {
-  font-size: 18px;
-  font-weight: 600;
   color: var(--yellow);
+  font-weight: 500;
 }
 
 .depoimentos-person p:nth-child(2) {
-  font-weight: 500;
+  font-weight: 400;
   color: var(--white);
+}
+
+.depoimentos-person p:nth-child(3) {
+  font-weight: 400;
+  color: var(--grey);
 }
 
 .depoimentos-video {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 100%;
   height: 0;
 }
 .depoimentos-video video {
@@ -888,35 +893,25 @@ h3 {
 
 .depoimentos-bottom {
   display: flex;
-  flex-wrap: nowrap;
-  overflow: scroll;
-  overflow-y: hidden;
-  gap: 32px;
-}
-
-.depoimentos-bottom div img {
-  border-radius: 8px;
-  min-width: 20vw;
+  justify-content: center;
+  width: auto;
 }
 
 @media (max-width: 1023px) {
+  .bg-depoimentos {
+    padding-top: 80px;
+  }
   .depoimentos-top {
+    margin: 0 auto;
+    max-width: 800px;
     grid-template-columns: 1fr;
     gap: 120px;
   }
   .depoimentos-ct {
     order: 2;
-  }
-  .depoimentos-ct {
+    gap: 16px;
     max-width: 600px;
     margin: 0 auto;
-  }
-  .depoimentos-person {
-    margin-left: auto;
-    text-align: end;
-  }
-  .depoimentos-ct {
-    gap: 16px;
   }
 }
 
@@ -927,90 +922,82 @@ h3 {
   .depoimentos-person p {
     font-size: 14px;
   }
+  .depoimentos-person p:first-child {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 423px) {
   .quote p {
     font-size: 16px;
   }
-  .depoimentos-person p {
-    font-size: 14px;
-  }
-  .quote:before {
-    top: -60px;
-    left: -30px;
-  }
 }
 
-/* carroussel */
+/* new slider */ 
 
-.gallery-container {
-  max-width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+#wrapper {
+  width: 100%;
+  position: relative;
 }
 
-.gallery-wrapper {
-  background-color: rgba(255, 255, 255, 0);
+#carousel {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
-.gallery-wrapper a {
-  padding: 20px 0px;
-  line-height: 0px;
-  border-radius: 500px;
-  color: var(--yellow);
+#carousel::-webkit-scrollbar {
+  height: 0;
 }
 
-.gallery {
+#prev,
+#next {
   display: flex;
-  flex-flow: row nowrap;
-}
-
-.gallery-wrapper {
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-content: center;
+  background: white;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
 }
 
-.gallery {
-  overflow-x: auto;
-  max-width: 972px;
-}
-
-.item {
-  padding: 0 12px;
-  width: 300px;
-}
-
-.gallery::-webkit-scrollbar {
+#prev {
+  top: 110%;
+  left: 10px;
+  transform: translate(50%, -50%);
   display: none;
 }
 
-.gallery-container {
-  margin: 0 auto;
+#next {
+  top: 110%;
+  right: 10px;
+  transform: translate(-50%, -50%);
 }
 
-@media (max-width: 1023px) {
-  .gallery {
-    max-width: 648px;
-  }
+#content {
+  display: grid;
+  grid-gap: 16px;
+  grid-auto-flow: column;
+  margin: auto;
+  box-sizing: border-box;
 }
 
-@media (max-width: 767px) {
-  .gallery {
-    max-width: 324px;
-  }
+.item {
+  width: calc(min(100vw, 300px) - 24px);
+  height: auto;
+  background: green;
 }
 
-@media (max-width: 424px) {
+@media (max-width: 450px) {
   .item {
-    width: 250px;
-  }
-  .gallery {
-    max-width: 274px;
+    width: calc(100vw - 40px);
+    height: auto;
+    background: green;
   }
 }
-
 /* precos */
 
 .precos {

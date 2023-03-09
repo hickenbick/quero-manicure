@@ -196,11 +196,12 @@
 
   <section class="bg-anuncios">
     <div class="anuncios container">
-        <div class="title container">
-          <span>ANÚNCIOS</span>
-          <h2>Veja como eles vão ficar</h2>
-          <p>Você vai aprender a criar do seu jeito!<p>
-        </div>
+      <div class="title container">
+        <span>ANÚNCIOS</span>
+        <h2>Veja como eles serão</h2>
+        <p>Você vai aprender a criar do seu jeito!
+        <p>
+      </div>
       <div class="anuncios-grid">
         <div>
           <img src="./img/anuncios/anuncio-facebook-1.jpg" alt="">
@@ -231,31 +232,53 @@
       <div class="depoimentos-top">
         <div class="depoimentos-ct">
           <div class="quote">
-            <p> Lorem ipsum dolor sit amet conse ctetur adipiscing elit Vel mauris turpis vel eget nec orci nec ipsum Elementum felis eu pellentesque velit vulputate. Elementum felis eu pellentesque velit.</p>
+            <p>A partir do momento que a gente começou a parceria a minha agenda começou a subir, apareciam clientes e mais clientes e eu tive minha agenda cheia em menos de um mês.</p>
           </div>
           <div class="depoimentos-person">
-            <p>Vera Lucindo</p>
+            <p>Carol Stemberg</p>
             <p class="city">Curitiba-PR</p>
-            <P class="instagram">@veramanicure</P>
+            <P class="instagram">@carolstemberg</P>
           </div>
         </div>
         <div class="depoimentos-video">
-          <video src="" width="320" height="320" controls></video>
+          <video src="./video/video-depoimento-compilado.mp4" width="320" height="320" controls></video>
           <div></div>
         </div>
       </div>
-      <div class="gallery-wrapper">
-        <a class="arrow-left control"><i class="fa-solid fa-chevron-left fa-xl"></i></a>
-        <div class="gallery">
-          <img class="item current-item" src="./img/depoimento.jpg" alt="Depoimento 1">
-          <img class="item" src="./img/depoimento.jpg" alt="Depoimento 2">
-          <img class="item" src="./img/depoimento.jpg" alt="Depoimento 3">
-          <img class="item" src="./img/depoimento.jpg" alt="Depoimento 4">
-          <img class="item" src="./img/depoimento.jpg" alt="Depoimento 5">
-          <img class="item" src="./img/depoimento.jpg" alt="Depoimento 6">
+
+      <!-- slider -->
+
+      <div class="depoimentos-bottom">
+        <div id="wrapper">
+          <div id="carousel">
+            <div id="content">
+              <img class="item" src="./img/dp-img/depoimento-1.jpeg" />
+              <img class="item" src="./img/dp-img/depoimento-2.jpeg" />
+              <img class="item" src="./img/dp-img/depoimento-3.jpeg" />
+              <img class="item" src="./img/dp-img/depoimento-4.jpeg" />
+              <img class="item" src="./img/dp-img/depoimento-5.jpeg" />
+              <img class="item" src="./img/dp-img/depoimento-6.jpeg" />
+              <img class="item" src="./img/dp-img/depoimento-7.jpeg" />
+            </div>
+          </div>
+
+          <button id="prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="none" d="M0 0h24v24H0V0z" />
+              <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+            </svg>
+          </button>
+          <button id="next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="none" d="M0 0h24v24H0V0z" />
+              <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+            </svg>
+          </button>
+
         </div>
-        <a class="arrow-right control"><i class="fa-solid fa-chevron-right fa-xl"></i></a>
+
       </div>
+
     </div>
   </section>
 

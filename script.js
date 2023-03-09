@@ -1,40 +1,30 @@
-const controls = document.querySelectorAll(".control");
-let currentItem = 0;
-const items = document.querySelectorAll(".item");
-const maxItems = items.length;
-const gallery = document.querySelector(".gallery")
+let item = document.querySelector(".item");
 
-controls.forEach(control => {
-  control.addEventListener("click", () => {
-    const isLeft = control.classList.contains("arrow-left");
-    const photoW = items[currentItem].clientWidth;
+const gap = 16;
 
-    if (isLeft) {
-      currentItem -= 1;
-    } else {
-      currentItem += 1;
-    }
+const carousel = document.getElementById("carousel"),
+  content = document.getElementById("content"),
+  next = document.getElementById("next"),
+  prev = document.getElementById("prev");
 
-    if (currentItem >= (maxItems -1)) {
-      currentItem -= 1;
-    }
-
-    if (currentItem < 0) {
-      currentItem += 1;
-    }
-
-    items.forEach(item => item.classList.remove("current-item"));
-
-    if (isLeft) {
-      gallery.scrollBy({
-        left: -photoW,
-        behavior: 'smooth'
-      });
-    } else {
-      gallery.scrollBy({
-        left: photoW,
-        behavior: 'smooth'
-      });
-    }
-  })
+next.addEventListener("click", (e) => {
+  carousel.scrollBy(width + gap, 0);
+  if (carousel.scrollWidth !== 0) {
+    prev.style.display = "flex";
+  }
+  if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+    next.style.display = "none";
+  }
 });
+prev.addEventListener("click", (e) => {
+  carousel.scrollBy(-(width + gap), 0);
+  if (carousel.scrollLeft - width - gap <= 0) {
+    prev.style.display = "none";
+  }
+  if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+    next.style.display = "flex";
+  }
+});
+
+let width = item.clientWidth;
+window.addEventListener("resize", (e) => (width = carousel.offsetWidth));
