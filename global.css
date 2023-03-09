@@ -1006,6 +1006,7 @@ h3 {
 
 .bg-precos {
   padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .precos {
@@ -1120,7 +1121,7 @@ h3 {
   margin: 5px;
 }
 
-.wpp-cta {
+/* .wpp-cta {
   padding-bottom: 120px;
   display: grid;
   place-items: center;
@@ -1137,15 +1138,15 @@ h3 {
   font-size: 16px;
   color: var(--grey);
   font-weight: 400;
-}
+} */
 
 @media (max-width: 1023px) {
   .bg-precos {
     padding-top: 80px;
   }
-  .wpp-cta {
+  /* .wpp-cta {
     padding-bottom: 80px;
-  }
+  } */
 }
 
 @media (max-width: 767px) {
@@ -1162,9 +1163,9 @@ h3 {
   .precos-wrapper li {
     text-align: left;
   }
-  .wpp-cta div p:first-child {
+  /* .wpp-cta div p:first-child {
     font-size: 20px;
-  }
+  } */
 }
 
 /* footer */
