@@ -955,7 +955,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-content: center;
-  background: white;
+  background: var(--yellow);
   border: none;
   padding: 8px;
   border-radius: 50%;
@@ -965,16 +965,16 @@ h3 {
 }
 
 #prev {
-  top: 110%;
-  left: 10px;
+  top: 50%;
+  left: -30px;
   transform: translate(50%, -50%);
   display: none;
 }
 
 #next {
-  top: 110%;
+  top: 50%;
   right: 10px;
-  transform: translate(-50%, -50%);
+  transform: translate(50%, -50%);
 }
 
 #content {
