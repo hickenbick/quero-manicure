@@ -509,7 +509,7 @@ h3 {
   margin-bottom: 10px;
 }
 
-.aulas-video video {
+.aulas-video iframe {
   position: absolute;
   top: 0;
   left: 0;
